@@ -34,12 +34,12 @@ Before you can run this app, please make sure you have the following dependencie
 
 5. Testing on Android
     ```bash
-    Open your Expo Go app and scan the QR code o terminal
+    Open your Expo Go app and scan the QR code displaying on the terminal
 
 6. Use Below details to login
     ```bash
-i. Email : test1@gmail.com
-ii. Password : testpass123
+    Email : test1@gmail.com
+    Password : testpass123
 
 After you successfully login you will see list of restaurants
 
