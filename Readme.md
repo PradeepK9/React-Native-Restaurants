@@ -33,9 +33,11 @@ Before you can run this app, please make sure you have the following dependencie
     npm start
 
 5. Testing on Android
+    ```bash
     Open your Expo Go app and scan the QR code o terminal
 
 6. Use Below details to login
+    ```bash
 i. Email : test1@gmail.com
 ii. Password : testpass123
 
