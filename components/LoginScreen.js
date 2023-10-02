@@ -8,7 +8,7 @@ import {
   ImageBackground,
   StyleSheet,
 } from "react-native";
-import auth from "./firebase";
+import auth from "../auth/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 const styles = StyleSheet.create({
@@ -62,7 +62,7 @@ const LoginScreen = () => {
 
   return (
     <ImageBackground
-      source={require("./assets/login-bg-img.jpg")}
+      source={require("../assets/login-bg-img.jpg")}
       style={styles.containerImg}
     >
       <View style={styles.container}>

@@ -1,8 +1,8 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useContext } from "react";
-import { AuthContext } from "./AuthContext";
-import BeautifulButton from "./common/BeautifulButton";
+import { AuthContext } from "../auth/AuthContext";
+import BeautifulButton from "../common/BeautifulButton";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: 80,
     height: 80,
-    backgroundColor: "#8b008b",
     margin: 10,
   },
 });
@@ -21,7 +20,6 @@ const styles = StyleSheet.create({
 const Home = () => {
   const { user } = useContext(AuthContext);
   const navigation = useNavigation();
-  console.log("user", user);
   return (
     <View style={styles.container}>
       <Text
@@ -35,20 +33,15 @@ const Home = () => {
           textAlign: "center",
         }}
       >
-        {" "}
         <Image
           style={styles.tinyLogo}
-          source={require("./assets/dummy-profile.png")}
+          source={require("../assets/dummy-profile.png")}
         />
         {"\n"}
         {"\n"}
-        <Text style={{ color: "#dc143c", margin: 8 }}>
-          Hello, Mr. {user.email}
-        </Text>
+        <Text style={{ color: "#dc143c" }}>Hello, Mr. {user.email}</Text>
         {"\n"}
-        <Text style={{ color: "#4b0082", margin: 8 }}>
-          Welcome to RestaurantApp
-        </Text>
+        <Text style={{ color: "#4b0082" }}>Welcome to RestaurantApp</Text>
       </Text>
       <Text
         style={{
@@ -61,16 +54,14 @@ const Home = () => {
           textAlign: "center",
         }}
       >
-        <Text style={{ color: "#8b0000", marginBottom: 10, fontSize: 18 }}>
+        <Text style={{ color: "#dc143c", marginBottom: 10, fontSize: 18 }}>
           Discover the best food & drinks
         </Text>
         {"\n"}
-        <Text style={{ color: "#8b0000", marginBottom: 10, fontSize: 18 }}>
-          😋😋
-        </Text>
+        <Text style={{ marginBottom: 10, fontSize: 18 }}>😋😋</Text>
         {"\n"}
         {"\n"}
-        <Text style={{ color: "#9932cc", marginBottom: 10, fontSize: 16 }}>
+        <Text style={{ color: "#8b008b", marginBottom: 10, fontSize: 16 }}>
           Discover the best food & drinks! Explore curated lists of top
           restaurants, cafes, pubs, and bars in Indore, based on trends 👇🏻
         </Text>

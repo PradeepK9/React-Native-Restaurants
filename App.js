@@ -1,6 +1,6 @@
 import React from "react";
-import Navigation from "./Navigation";
-import {AuthProvider} from "./AuthContext";
+import Navigation from "./routes/Navigation";
+import {AuthProvider} from "./auth/AuthContext";
 
 const App = () => {
   return (
