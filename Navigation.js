@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './LoginScreen';
 import RestaurantList from './RestaurantList';
 import ProtectedRoute from './ProtectedRoute';
+import Home from './Home'
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,13 @@ const Navigation = () => (
         {() => (
           <ProtectedRoute>
             <RestaurantList />
+          </ProtectedRoute>
+        )}
+      </Stack.Screen>
+      <Stack.Screen name="Home" options={{ title: 'Home Page' }}>
+        {() => (
+          <ProtectedRoute>
+            <Home />
           </ProtectedRoute>
         )}
       </Stack.Screen>
