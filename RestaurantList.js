@@ -6,17 +6,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#ff69b4",
   },
   centeredTitle: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: "bold",
-    marginBottom: 16,
-    textAlign: "center", // Center the text horizontally
-    color: "green", // Change the text color to green
+    marginBottom: 20,
+    padding: 14,
+    textAlign: "center",
+    color: "#4b0082",
+    backgroundColor: "#00ff7f",
   },
   listItem: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#d8bfd8",
     padding: 16,
     marginBottom: 16,
     borderRadius: 8,
@@ -27,14 +29,14 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   itemTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 15,
+    textAlign: "center",
   },
 });
 
 const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([]);
-  
+
   console.log("RestaurantList.....");
 
   useEffect(() => {
@@ -52,7 +54,7 @@ const RestaurantList = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.centeredTitle}>List of Restaurents</Text>
+      <Text style={styles.centeredTitle}>Restaurents List</Text>
       <FlatList
         data={restaurants}
         keyExtractor={(item) => item.id.toString()}
