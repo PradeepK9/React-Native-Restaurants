@@ -34,18 +34,18 @@ Before you can run this app, please make sure you have the following dependencie
 
 5. Testing on Android
     ```bash
-    Open your 'Expo' Go app and scan the QR code displaying on the terminal
+    Open your 'Expo Go' app and scan the QR code displaying on the terminal
 
 6. Testing on Web Browser
     ```bash
-    Press W it will run the app in your default browser
+    Press 'w' it will run the app in your default browser
 
 7. Use Below credentials to login
     ```bash
     Email : test1@gmail.com
     Password : testpass123
 
-After you successfully login you will see welcome page.From here you can explore the list of available restaurants.
+After you successfully login you will see welcome page. From here you can explore the list of available restaurants.
 
 ## Thank You!
 
