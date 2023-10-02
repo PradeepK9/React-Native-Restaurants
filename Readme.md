@@ -8,7 +8,7 @@ Before you can run this app, please make sure you have the following dependencie
 
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/) (for running the app)
-- [Expo Go](https://expo.dev/client) app installed on your Android device for testing(Only if you want to test on the app on real device)
+- [Expo Go](https://expo.dev/client) (Optional) app installed on your Android device for testing(Install if you want to test on real device)
 
 ## Installation
 
@@ -34,19 +34,18 @@ Before you can run this app, please make sure you have the following dependencie
 
 5. Testing on Android
     ```bash
-    Open your Expo Go app and scan the QR code displaying on the terminal
+    Open your 'Expo' Go app and scan the QR code displaying on the terminal
 
 6. Testing on Web Browser
     ```bash
-    Press W on terminal it will run the app in default browser
+    Press W it will run the app in your default browser
 
-7. Use Below details to login
+7. Use Below credentials to login
     ```bash
     Email : test1@gmail.com
     Password : testpass123
 
-After you successfully login you will see welcome home page.
-From home page you can explore the list of available restaurants.
+After you successfully login you will see welcome page.From here you can explore the list of available restaurants.
 
 ## Thank You!
 
