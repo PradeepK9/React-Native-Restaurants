@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  ActivityIndicator,
+  StyleSheet,
+} from "react-native";
 import axios from "axios";
 
 const styles = StyleSheet.create({
@@ -36,6 +42,7 @@ const styles = StyleSheet.create({
 
 const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   console.log("RestaurantList.....");
 
@@ -46,24 +53,32 @@ const RestaurantList = () => {
       .get(apiUrl)
       .then((response) => {
         setRestaurants(response.data);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.centeredTitle}>Restaurents List</Text>
-      <FlatList
-        data={restaurants}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View style={styles.listItem}>
-            <Text style={styles.itemTitle}>{item.title}</Text>
-          </View>
-        )}
-      />
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <>
+          <Text style={styles.centeredTitle}>Restaurants List</Text>
+          <FlatList
+            data={restaurants}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => (
+              <View style={styles.listItem}>
+                <Text style={styles.itemTitle}>{item.title}</Text>
+              </View>
+            )}
+          />
+        </>
+      )}
     </View>
   );
 };
